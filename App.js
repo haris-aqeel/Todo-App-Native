@@ -20,7 +20,7 @@ const PizzaTranslator = () => {
           return todo.id === editState.editID ? {id: editState.editID, value: text}: todo
         })
       ]);
-      
+      editState.state === 1 && setEditState({state: 0, editID: null})
   };
   const handleDelete = (id) => {
     const filteredArray = todoList.filter((todo) => {
